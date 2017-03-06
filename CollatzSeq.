@@ -1,0 +1,28 @@
+number = int()
+while True:
+    try:
+        print('Enter Number.')
+        number = (int(input()))
+    except ValueError:
+        print('Please enter a valid Integer:')
+        continue
+    else:
+        break
+
+
+def collatz(number):
+    if number % 2 == 0:
+        print(number // 2)
+        return number // 2
+    
+    elif number % 2 != 0:
+        print(3 * number + 1)
+        return 3 * number + 1
+    
+while True:
+    
+    if number > 1:
+       
+       number = collatz(number)
+    else:
+        break
